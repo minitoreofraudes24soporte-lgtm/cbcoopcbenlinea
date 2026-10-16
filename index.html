@@ -3,1084 +3,534 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Fernanda Portel Limberger | Sonorização e Iluminação</title>
+  <title>Sanderley Santos Borges | Gestor de Tráfego Pago</title>
+  <meta name="description" content="Sanderley Santos Borges — gestão de tráfego pago, campanhas digitais, otimização de anúncios e estratégias de marketing para empresas.">
 
-  <meta name="description" content="Site institucional de Fernanda Portel Limberger, empresa estabelecida em São Martinho da Serra, Rio Grande do Sul, com atividade de sonorização e iluminação.">
-
-  <meta name="theme-color" content="#101426">
-
-  <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-
-  <!-- Bootstrap Icons -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet"
-  >
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #101426;
-      --bg-light: #171d34;
-      --primary: #7c5cff;
-      --secondary: #22d3ee;
-      --text: #f7f8ff;
-      --muted: #b5bdd3;
-      --border: rgba(255,255,255,.12);
+      --bg: #0b1020;
+      --panel: #121a2d;
+      --purple: #9270ff;
+      --cyan: #52e2d0;
+      --text: #f5f7ff;
+      --muted: #a6b0c5;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: "Inter", sans-serif;
-      line-height: 1.7;
+      font-family: Inter, sans-serif;
     }
 
-    h1, h2, h3, h4, .navbar-brand {
-      font-family: "Montserrat", sans-serif;
-    }
-
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; }
 
     .navbar {
-      background: rgba(16, 20, 38, .94);
-      border-bottom: 1px solid var(--border);
+      background: rgba(11,16,32,.94);
+      border-bottom: 1px solid rgba(255,255,255,.08);
       backdrop-filter: blur(15px);
     }
 
-    .navbar-brand {
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: -.4px;
-    }
+    .navbar-brand { color: white; font-weight: 800; }
 
     .brand-icon {
-      display: inline-flex;
+      display: inline-grid;
+      place-items: center;
       width: 42px;
       height: 42px;
-      align-items: center;
-      justify-content: center;
-      margin-right: 9px;
+      margin-right: 10px;
       border-radius: 13px;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      font-size: 1.35rem;
+      color: #0b1020;
+      background: linear-gradient(135deg,var(--cyan),var(--purple));
     }
 
-    .navbar .nav-link {
-      color: #dce1f2;
-      font-size: .92rem;
-      margin: 0 7px;
-    }
-
-    .navbar .nav-link:hover {
-      color: var(--secondary);
-    }
-
-    .btn-gradient {
-      border: 0;
-      border-radius: 9px;
-      padding: 12px 21px;
-      background: linear-gradient(110deg, var(--primary), #5d9cff);
-      color: white;
-      font-weight: 700;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .btn-gradient:hover {
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(124,92,255,.25);
-    }
+    .nav-link { color: #c4cbe0; }
+    .nav-link:hover { color: var(--cyan); }
 
     .hero {
       position: relative;
       overflow: hidden;
-      min-height: 690px;
-      display: flex;
-      align-items: center;
-      padding: 130px 0 90px;
+      padding: 150px 0 100px;
       background:
-        radial-gradient(ellipse at 80% 20%, rgba(124,92,255,.22), transparent 40%),
-        radial-gradient(ellipse at 20% 80%, rgba(34,211,238,.11), transparent 40%),
+        radial-gradient(ellipse at 80% 20%,rgba(146,112,255,.22),transparent 40%),
+        radial-gradient(ellipse at 10% 80%,rgba(82,226,208,.12),transparent 35%),
         var(--bg);
     }
 
-    .hero::before {
-      position: absolute;
-      inset: 0;
-      content: "";
-      opacity: .16;
-      background-image:
-        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black, transparent);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 8px 14px;
-      border: 1px solid rgba(34,211,238,.28);
+      display: inline-block;
+      padding: 9px 14px;
+      border: 1px solid rgba(82,226,208,.3);
       border-radius: 30px;
-      background: rgba(34,211,238,.07);
-      color: #a5f3fc;
+      color: var(--cyan);
+      background: rgba(82,226,208,.06);
       font-size: .8rem;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
+    h1, h2, h3 { letter-spacing: -1px; }
+
     .hero h1 {
-      max-width: 780px;
       margin: 25px 0;
-      font-size: clamp(2.5rem, 5.3vw, 4.8rem);
-      line-height: 1.12;
+      font-size: clamp(2.7rem,6vw,5rem);
       font-weight: 800;
-      letter-spacing: -2.4px;
+      line-height: 1.08;
     }
 
     .gradient-text {
-      color: #a99aff;
-      background: linear-gradient(100deg, #b7a6ff, #5ce7f7);
+      color: var(--purple);
+      background: linear-gradient(90deg,#b5a0ff,var(--cyan));
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .hero-description {
-      max-width: 650px;
+    .lead-copy {
+      max-width: 620px;
       color: var(--muted);
-      font-size: 1.1rem;
+      line-height: 1.9;
     }
 
-    .hero-visual {
-      position: relative;
-      min-height: 390px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .btn-main {
+      display: inline-block;
+      padding: 14px 22px;
+      border: 0;
+      border-radius: 10px;
+      color: #09121d;
+      background: linear-gradient(110deg,var(--cyan),#a5f3e7);
+      font-weight: 800;
+      transition: .2s;
     }
 
-    .visual-orbit {
-      width: min(350px, 90%);
-      aspect-ratio: 1;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,92,255,.17), rgba(16,20,38,.1) 65%);
-      box-shadow: 0 0 90px rgba(124,92,255,.12);
+    .btn-main:hover {
+      color: #09121d;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(82,226,208,.17);
     }
 
-    .visual-orbit::before,
-    .visual-orbit::after {
-      position: absolute;
-      content: "";
-      border: 1px solid rgba(34,211,238,.22);
-      border-radius: 50%;
+    .btn-outline-custom {
+      display: inline-block;
+      padding: 13px 22px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 10px;
+      color: white;
+      font-weight: 600;
     }
 
-    .visual-orbit::before {
-      inset: 28px;
+    .btn-outline-custom:hover {
+      color: var(--cyan);
+      border-color: var(--cyan);
     }
 
-    .visual-orbit::after {
-      inset: -24px;
-      border-color: rgba(124,92,255,.2);
+    .hero-card {
+      padding: 35px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 24px;
+      background: linear-gradient(145deg,#19243c,#101728);
+      box-shadow: 0 25px 80px rgba(0,0,0,.2);
     }
 
-    .visual-icon {
-      width: 150px;
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 35px;
-      color: #fff;
-      background: linear-gradient(135deg, #7c5cff, #287de8);
-      box-shadow: 0 25px 70px rgba(124,92,255,.35);
+    .chart-icon {
+      display: grid;
+      place-items: center;
+      height: 220px;
+      border-radius: 20px;
+      color: var(--cyan);
+      background:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+        #0d1528;
+      background-size: 30px 30px;
       font-size: 5rem;
-      transform: rotate(-7deg);
     }
 
-    .floating-icon {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      color: var(--secondary);
-      background: #1b213b;
-      font-size: 1.6rem;
-      box-shadow: 0 12px 35px rgba(0,0,0,.25);
-    }
-
-    .floating-one {
-      top: 22px;
-      right: 5px;
-    }
-
-    .floating-two {
-      bottom: 25px;
-      left: 0;
-      color: #c4b5fd;
-    }
-
-    .floating-three {
-      bottom: 45px;
-      right: 5px;
-      color: #fde68a;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
+    .section { padding: 90px 0; }
 
     .section-label {
-      color: var(--secondary);
-      font-size: .8rem;
+      color: var(--cyan);
+      font-size: .78rem;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     .section-title {
-      margin: 12px 0 20px;
-      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 13px 0 18px;
+      font-size: clamp(2rem,4vw,3.2rem);
       font-weight: 800;
-      letter-spacing: -1.2px;
     }
 
-    .section-description {
-      max-width: 720px;
-      color: var(--muted);
-    }
+    .muted { color: var(--muted); line-height: 1.85; }
 
-    .about-panel {
+    .service-card {
       height: 100%;
-      padding: 34px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
-    }
-
-    .about-symbol {
-      width: 64px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.09);
       border-radius: 18px;
-      color: #c4b5fd;
-      background: rgba(124,92,255,.15);
-      font-size: 1.9rem;
+      background: var(--panel);
+      transition: transform .2s,border-color .2s;
     }
 
-    .about-panel p {
-      margin-bottom: 0;
-      color: var(--muted);
-    }
-
-    .feature-card {
-      height: 100%;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--bg-light);
-      transition: border-color .25s, transform .25s;
-    }
-
-    .feature-card:hover {
+    .service-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(34,211,238,.5);
+      border-color: rgba(82,226,208,.45);
     }
 
-    .feature-icon {
-      color: var(--secondary);
-      font-size: 2rem;
-    }
-
-    .feature-card h3 {
-      margin: 17px 0 10px;
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .feature-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    .details-section {
-      background: #0c1020;
-    }
-
-    .details-box {
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: var(--bg-light);
-    }
-
-    .details-heading {
-      padding: 25px 28px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .details-heading h3 {
-      margin: 0;
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .detail-row {
+    .service-icon {
       display: grid;
-      grid-template-columns: minmax(140px, .8fr) 1.5fr;
-      gap: 20px;
-      padding: 17px 28px;
-      border-bottom: 1px solid var(--border);
+      place-items: center;
+      width: 55px;
+      height: 55px;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      color: var(--cyan);
+      background: rgba(82,226,208,.1);
+      font-size: 1.6rem;
     }
 
-    .detail-row:last-child {
-      border-bottom: 0;
+    .service-card h3 { font-size: 1.15rem; font-weight: 700; }
+
+    .process-number {
+      color: var(--purple);
+      font-size: 2.4rem;
+      font-weight: 800;
     }
 
-    .detail-label {
-      color: var(--muted);
-      font-size: .9rem;
+    .process-card {
+      padding: 25px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
     }
 
-    .detail-value {
-      overflow-wrap: anywhere;
-      color: #f7f8ff;
-      font-size: .93rem;
-      font-weight: 600;
-    }
-
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #86efac;
-    }
-
-    .status::before {
-      width: 7px;
-      height: 7px;
-      content: "";
-      border-radius: 50%;
-      background: #4ade80;
-    }
-
-    .location-panel {
-      height: 100%;
-      padding: 35px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(124,92,255,.16), transparent 45%),
-        var(--bg-light);
-    }
-
-    .location-icon {
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      border-radius: 17px;
-      color: var(--secondary);
-      background: rgba(34,211,238,.1);
-      font-size: 1.8rem;
-    }
-
-    .location-panel p {
-      color: var(--muted);
-    }
-
-    .cta-section {
-      padding: 75px 0;
-    }
-
-    .cta-panel {
-      position: relative;
-      overflow: hidden;
-      padding: 55px;
-      border: 1px solid rgba(124,92,255,.4);
+    .contact-panel {
+      padding: 45px;
+      border: 1px solid rgba(146,112,255,.28);
       border-radius: 24px;
       background:
-        radial-gradient(circle at 90% 0%, rgba(34,211,238,.13), transparent 35%),
-        linear-gradient(120deg, rgba(124,92,255,.15), rgba(23,29,52,.85));
+        radial-gradient(circle at 100% 0,rgba(146,112,255,.16),transparent 40%),
+        var(--panel);
     }
 
-    .cta-panel h2 {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 800;
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      margin: 22px 0;
     }
 
-    .cta-panel p {
-      margin-bottom: 0;
-      color: var(--muted);
+    .contact-item i {
+      color: var(--cyan);
+      font-size: 1.4rem;
     }
 
     footer {
-      padding: 35px 0;
-      border-top: 1px solid var(--border);
-      background: #0c1020;
-    }
-
-    .footer-text {
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
       color: var(--muted);
-      font-size: .85rem;
+      font-size: .88rem;
     }
 
-    .back-top {
-      position: fixed;
-      z-index: 1000;
-      right: 20px;
-      bottom: 20px;
-      width: 46px;
-      height: 46px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 14px;
-      color: white;
-      background: linear-gradient(135deg, var(--primary), #398de8);
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
-    }
-
-    @media (max-width: 991px) {
-      .hero {
-        min-height: auto;
-        padding-top: 125px;
-      }
-
-      .hero-visual {
-        min-height: 350px;
-        margin-top: 25px;
-      }
-
-      .navbar .nav-link {
-        margin: 5px 0;
-      }
-
-      .section {
-        padding: 75px 0;
-      }
-    }
-
-    @media (max-width: 575px) {
-      .hero h1 {
-        letter-spacing: -1.4px;
-      }
-
-      .hero-description {
-        font-size: 1rem;
-      }
-
-      .visual-orbit {
-        width: 260px;
-      }
-
-      .visual-icon {
-        width: 115px;
-        height: 115px;
-        font-size: 3.8rem;
-      }
-
-      .floating-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 14px;
-      }
-
-      .about-panel,
-      .location-panel {
-        padding: 25px;
-      }
-
-      .detail-row {
-        grid-template-columns: 1fr;
-        gap: 4px;
-        padding: 15px 20px;
-      }
-
-      .details-heading {
-        padding: 22px 20px;
-      }
-
-      .cta-panel {
-        padding: 30px 24px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition-duration: .01ms !important;
-      }
+    @media(max-width:767px) {
+      .hero { padding: 120px 0 70px; }
+      .section { padding: 65px 0; }
+      .hero-card,.contact-panel { padding: 25px; }
     }
   </style>
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container py-2">
+    <a class="navbar-brand d-flex align-items-center" href="#inicio">
+      <span class="brand-icon"><i class="bi bi-graph-up-arrow"></i></span>
+      <span>Sanderley Borges</span>
+    </a>
 
-  <!-- Navegação -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#menu" aria-controls="menu" aria-expanded="false"
+      aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#metodo">Metodologia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" id="inicio">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#inicio">
-        <span class="brand-icon">
-          <i class="bi bi-soundwave"></i>
-        </span>
-        <span>
-          Fernanda Portel Limberger
-          <small class="d-block fw-normal text-secondary"
-                 style="font-size:.7rem">
-            Sonorização e iluminação
-          </small>
-        </span>
-      </a>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">
+            <i class="bi bi-bullseye me-2"></i>Marketing de performance
+          </span>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menuPrincipal"
-        aria-controls="menuPrincipal"
-        aria-expanded="false"
-        aria-label="Abrir menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          <h1>
+            Estratégia digital para
+            <span class="gradient-text">atrair clientes.</span>
+          </h1>
 
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#inicio">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre a empresa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#atuacao">Área de atuação</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#empresa">Dados cadastrais</a>
-          </li>
-          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-            <a class="btn btn-gradient" href="#localizacao">
-              <i class="bi bi-geo-alt me-1"></i>
-              Localização
+          <p class="lead-copy">
+            Sou Sanderley Santos Borges, gestor de tráfego pago.
+            Meu foco é ajudar empresas a estruturar campanhas digitais,
+            alcançar públicos relevantes e tomar decisões com base
+            em dados, testes e otimização contínua.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#servicos" class="btn-main">
+              Conheça os serviços <i class="bi bi-arrow-right ms-2"></i>
             </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- Apresentação -->
-    <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-7">
-            <span class="eyebrow">
-              <i class="bi bi-lightning-charge-fill"></i>
-              Apresentação institucional
-            </span>
-
-            <h1>
-              Som e luz em destaque.
-              <span class="gradient-text">
-                Tecnologia e expressão.
-              </span>
-            </h1>
-
-            <p class="hero-description">
-              Conheça a empresa Fernanda Portel Limberger, estabelecida
-              em São Martinho da Serra, no Rio Grande do Sul, com atividade
-              econômica de sonorização e iluminação.
-            </p>
-
-            <div class="d-flex flex-wrap gap-3 mt-4">
-              <a href="#sobre" class="btn btn-gradient">
-                Conheça a empresa
-                <i class="bi bi-arrow-down-right ms-2"></i>
-              </a>
-
-              <a href="#empresa"
-                 class="btn btn-outline-light rounded-3 px-4 py-3">
-                Dados cadastrais
-              </a>
-            </div>
-
-            <div class="d-flex flex-wrap gap-4 mt-5">
-              <div>
-                <div class="fw-bold fs-5">2017</div>
-                <div class="text-secondary small">Ano de fundação</div>
-              </div>
-
-              <div>
-                <div class="fw-bold fs-5">RS</div>
-                <div class="text-secondary small">Rio Grande do Sul</div>
-              </div>
-
-              <div>
-                <div class="fw-bold fs-5">Ativa</div>
-                <div class="text-secondary small">Situação informada</div>
-              </div>
-            </div>
+            <a href="#contato" class="btn-outline-custom">Entre em contato</a>
           </div>
 
-          <div class="col-lg-5">
-            <div class="hero-visual" aria-hidden="true">
-              <div class="visual-orbit">
-                <div class="visual-icon">
-                  <i class="bi bi-speaker-fill"></i>
-                </div>
-
-                <div class="floating-icon floating-one">
-                  <i class="bi bi-lightning-charge-fill"></i>
-                </div>
-
-                <div class="floating-icon floating-two">
-                  <i class="bi bi-soundwave"></i>
-                </div>
-
-                <div class="floating-icon floating-three">
-                  <i class="bi bi-stars"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sobre -->
-    <section class="section" id="sobre">
-      <div class="container">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-lg-5">
-            <span class="section-label">Sobre a empresa</span>
-            <h2 class="section-title">
-              Conheça Fernanda Portel Limberger
-            </h2>
-
-            <p class="section-description">
-              Uma apresentação institucional com informações de
-              identificação empresarial e sua área econômica de atuação,
-              conforme os dados cadastrais fornecidos.
-            </p>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="about-panel">
-              <div class="about-symbol">
-                <i class="bi bi-building"></i>
-              </div>
-
-              <h3 class="h4 fw-bold mb-3">
-                Identidade e atividade econômica
-              </h3>
-
-              <p>
-                A empresa 28.993.148 Fernanda Portel Limberger foi fundada
-                em 2 de novembro de 2017 e está localizada no município
-                de São Martinho da Serra, no estado do Rio Grande do Sul.
-                Sua atividade econômica principal está classificada no
-                CNAE 90.01-9-06, correspondente a atividades de
-                sonorização e de iluminação.
-              </p>
-
-              <p class="mt-3">
-                Esta página reúne os dados empresariais disponibilizados
-                para apresentação institucional, sem atribuir à empresa
-                serviços, contatos ou credenciais não confirmados.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Área de atuação -->
-    <section class="section pt-0" id="atuacao">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="section-label">Atividade econômica</span>
-          <h2 class="section-title">Sonorização e iluminação</h2>
-          <p class="section-description mx-auto">
-            A classificação econômica informada identifica o segmento
-            de atividade da empresa. Os itens abaixo apresentam aspectos
-            gerais desse segmento, não um catálogo de serviços confirmados.
+          <p class="small muted mt-4 mb-0">
+            Estratégia • Análise • Otimização
           </p>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="bi bi-soundwave"></i>
-              </div>
-              <h3>Sonorização</h3>
-              <p>
-                Área relacionada ao som e aos recursos de áudio,
-                conforme a classificação econômica informada.
-              </p>
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <div class="chart-icon">
+              <i class="bi bi-bar-chart-line"></i>
             </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="bi bi-lightbulb"></i>
-              </div>
-              <h3>Iluminação</h3>
-              <p>
-                Área relacionada aos recursos de iluminação, de acordo
-                com a atividade econômica cadastrada.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="bi bi-card-checklist"></i>
-              </div>
-              <h3>Informações empresariais</h3>
-              <p>
-                Consulta aos dados de identificação e à classificação
-                econômica informada para a empresa.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 text-secondary small">
-          <i class="bi bi-info-circle me-1"></i>
-          A disponibilidade de equipamentos, locação, montagem,
-          atendimento a eventos ou outros serviços deve ser confirmada
-          diretamente com a empresa antes de ser divulgada.
-        </div>
-      </div>
-    </section>
-
-    <!-- Dados cadastrais -->
-    <section class="section details-section" id="empresa">
-      <div class="container">
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-5">
-            <span class="section-label">Cadastro empresarial</span>
-            <h2 class="section-title">
-              Informações da empresa
-            </h2>
-            <p class="section-description">
-              Dados apresentados conforme as informações fornecidas
-              para a elaboração deste site institucional.
-            </p>
-
-            <div class="mt-4">
-              <div class="d-flex align-items-start gap-3 mb-4">
-                <i class="bi bi-patch-check fs-3"
-                   style="color:var(--secondary)"></i>
-                <div>
-                  <h3 class="h6 fw-bold">Identificação cadastral</h3>
-                  <p class="text-secondary small mb-0">
-                    Razão social e CNPJ informados.
-                  </p>
-                </div>
-              </div>
-
-              <div class="d-flex align-items-start gap-3 mb-4">
-                <i class="bi bi-calendar-event fs-3"
-                   style="color:var(--secondary)"></i>
-                <div>
-                  <h3 class="h6 fw-bold">Fundação</h3>
-                  <p class="text-secondary small mb-0">
-                    2 de novembro de 2017.
-                  </p>
-                </div>
-              </div>
-
-              <div class="d-flex align-items-start gap-3">
-                <i class="bi bi-geo-alt fs-3"
-                   style="color:var(--secondary)"></i>
-                <div>
-                  <h3 class="h6 fw-bold">Município</h3>
-                  <p class="text-secondary small mb-0">
-                    São Martinho da Serra, Rio Grande do Sul.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="details-box">
-              <div class="details-heading">
-                <h3>
-                  <i class="bi bi-file-earmark-text me-2"
-                     style="color:var(--secondary)"></i>
-                  Dados cadastrais informados
-                </h3>
-              </div>
-
-              <div class="detail-row">
-                <div class="detail-label">Nome empresarial</div>
-                <div class="detail-value">
-                  28.993.148 Fernanda Portel Limberger
-                </div>
-              </div>
-
-              <div class="detail-row">
-                <div class="detail-label">CNPJ</div>
-                <div class="detail-value">28.993.148/0001-93</div>
-              </div>
-
-              <div class="detail-row">
-                <div class="detail-label">Data de abertura</div>
-                <div class="detail-value">02/11/2017</div>
-              </div>
-
-              <div class="detail-row">
-                <div class="detail-label">Situação cadastral</div>
-                <div class="detail-value">
-                  <span class="status">Ativa, conforme informado</span>
-                </div>
-              </div>
-
-              <div class="detail-row">
-                <div class="detail-label">Atividade principal</div>
-                <div class="detail-value">
-                  CNAE 90.01-9-06 — Atividades de sonorização e de iluminação
-                </div>
-              </div>
-
-              <div class="detail-row">
-                <div class="detail-label">Município</div>
-                <div class="detail-value">São Martinho da Serra</div>
-              </div>
-
-              <div class="detail-row">
-                <div class="detail-label">Estado</div>
-                <div class="detail-value">Rio Grande do Sul (RS)</div>
-              </div>
-            </div>
-
-            <p class="text-secondary small mt-3">
-              Os dados cadastrais devem ser conferidos com os registros
-              oficiais antes da publicação definitiva.
+            <h2 class="h4 fw-bold mt-4">Tráfego com estratégia</h2>
+            <p class="muted mb-0">
+              Planejamento de campanhas, acompanhamento de indicadores
+              e melhorias contínuas orientadas pelos objetivos do negócio.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Localização -->
-    <section class="section" id="localizacao">
-      <div class="container">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-lg-6">
-            <div class="location-panel">
-              <div class="location-icon">
-                <i class="bi bi-geo-alt-fill"></i>
-              </div>
-
-              <span class="section-label">Localização municipal</span>
-              <h2 class="section-title fs-2">
-                São Martinho da Serra — RS
-              </h2>
-
-              <p>
-                A empresa está associada ao município de São Martinho
-                da Serra, no Rio Grande do Sul. O endereço completo
-                não foi informado e, por isso, não é exibido nesta página.
-              </p>
-
-              <a
-                class="btn btn-gradient mt-3"
-                href="https://www.google.com/maps/search/?api=1&query=S%C3%A3o+Martinho+da+Serra%2C+RS"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="bi bi-map me-2"></i>
-                Ver município no mapa
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="location-panel d-flex flex-column justify-content-center">
-              <div class="location-icon">
-                <i class="bi bi-info-circle"></i>
-              </div>
-
-              <h3 class="h4 fw-bold mb-3">
-                Informações e contato
-              </h3>
-
-              <p>
-                Este site apresenta informações institucionais e
-                cadastrais fornecidas sobre a empresa.
-              </p>
-
-              <p>
-                Telefone, e-mail, endereço detalhado e canais oficiais
-                de atendimento não foram disponibilizados para esta
-                página e, por isso, não são exibidos.
-              </p>
-
-              <div class="mt-2 text-secondary small">
-                <i class="bi bi-shield-check me-2"></i>
-                Informações apresentadas com foco em clareza e
-                identificação empresarial.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Encerramento -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-panel">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-8">
-              <span class="section-label">Apresentação institucional</span>
-              <h2 class="mt-3 mb-3">
-                Fernanda Portel Limberger
-              </h2>
-              <p>
-                Informações empresariais de uma atividade econômica
-                relacionada à sonorização e à iluminação em
-                São Martinho da Serra, Rio Grande do Sul.
-              </p>
-            </div>
-
-            <div class="col-lg-4 text-lg-end">
-              <a href="#inicio" class="btn btn-gradient">
-                Voltar ao início
-                <i class="bi bi-arrow-up-right ms-2"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Rodapé -->
-  <footer>
+  <section class="section" id="sobre">
     <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-md-7">
-          <a href="#inicio"
-             class="navbar-brand d-inline-flex align-items-center">
-            <span class="brand-icon">
-              <i class="bi bi-soundwave"></i>
-            </span>
-            Fernanda Portel Limberger
-          </a>
-
-          <p class="footer-text mt-3 mb-0">
-            CNPJ 28.993.148/0001-93
-          </p>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="section-label">Sobre mim</span>
+          <h2 class="section-title">Marketing que começa com planejamento.</h2>
         </div>
-
-        <div class="col-md-5 text-md-end">
-          <p class="footer-text mb-1">
-            São Martinho da Serra — RS
+        <div class="col-lg-7">
+          <p class="muted">
+            A gestão de tráfego pago vai além de criar anúncios.
+            Ela envolve entender o público, definir objetivos, estruturar
+            campanhas, acompanhar resultados e identificar oportunidades
+            de melhoria ao longo do tempo.
           </p>
-          <p class="footer-text mb-0">
-            CNAE 90.01-9-06
-          </p>
-          <p class="footer-text mt-3 mb-0">
-            &copy; <span id="anoAtual"></span>
-            Fernanda Portel Limberger.
+          <p class="muted mb-0">
+            Meu trabalho é voltado à construção de uma presença digital
+            mais estratégica, com comunicação clara, acompanhamento
+            organizado e decisões orientadas por métricas relevantes.
           </p>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Botão voltar ao topo -->
-  <a href="#inicio"
-     class="back-top"
-     aria-label="Voltar ao início"
-     title="Voltar ao início">
-    <i class="bi bi-arrow-up"></i>
-  </a>
+  <section class="section pt-0" id="servicos">
+    <div class="container">
+      <div class="mb-5">
+        <span class="section-label">O que faço</span>
+        <h2 class="section-title">Serviços de tráfego pago</h2>
+        <p class="muted">Soluções que podem ser ajustadas aos objetivos e à realidade de cada negócio.</p>
+      </div>
 
-  <!-- Bootstrap JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon"><i class="bi bi-google"></i></div>
+            <h3>Google Ads</h3>
+            <p class="muted mb-0">
+              Estruturação e otimização de campanhas de pesquisa e outras
+              modalidades compatíveis com os objetivos do negócio.
+            </p>
+          </article>
+        </div>
 
-  <script>
-    document.getElementById("anoAtual").textContent =
-      new Date().getFullYear();
+        <div class="col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon"><i class="bi bi-megaphone"></i></div>
+            <h3>Anúncios em redes sociais</h3>
+            <p class="muted mb-0">
+              Planejamento de campanhas para alcançar públicos relevantes
+              em plataformas sociais, conforme a estratégia definida.
+            </p>
+          </article>
+        </div>
 
-    // Fecha o menu móvel após selecionar uma seção.
-    document.querySelectorAll("#menuPrincipal .nav-link").forEach(link => {
-      link.addEventListener("click", () => {
-        const menu = document.getElementById("menuPrincipal");
+        <div class="col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon"><i class="bi bi-graph-up"></i></div>
+            <h3>Análise de desempenho</h3>
+            <p class="muted mb-0">
+              Acompanhamento de indicadores, análise de custos e
+              identificação de oportunidades para melhorar campanhas.
+            </p>
+          </article>
+        </div>
 
-        if (menu.classList.contains("show")) {
-          bootstrap.Collapse.getOrCreateInstance(menu).hide();
-        }
-      });
-    });
-  </script>
+        <div class="col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon"><i class="bi bi-bullseye"></i></div>
+            <h3>Estratégia de público</h3>
+            <p class="muted mb-0">
+              Definição de objetivos, públicos e mensagens alinhadas
+              ao posicionamento e à oferta da empresa.
+            </p>
+          </article>
+        </div>
 
+        <div class="col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon"><i class="bi bi-speedometer2"></i></div>
+            <h3>Otimização contínua</h3>
+            <p class="muted mb-0">
+              Revisão de campanhas, testes e ajustes baseados nos dados
+              disponíveis e nas metas estabelecidas.
+            </p>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="service-card">
+            <div class="service-icon"><i class="bi bi-layout-text-window"></i></div>
+            <h3>Jornada do cliente</h3>
+            <p class="muted mb-0">
+              Avaliação dos anúncios e das páginas de destino para
+              buscar uma experiência mais clara e coerente para o público.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="metodo" style="background:#0e1527">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <span class="section-label">Como trabalho</span>
+          <h2 class="section-title">Um processo claro, do plano à otimização.</h2>
+          <p class="muted">
+            Cada projeto precisa de objetivos definidos, acompanhamento
+            consistente e transparência sobre o que os dados mostram.
+          </p>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="process-card d-flex gap-4">
+            <div class="process-number">01</div>
+            <div>
+              <h3 class="h5 fw-bold">Diagnóstico e objetivos</h3>
+              <p class="muted mb-0">Entendimento do negócio, do público e das metas prioritárias.</p>
+            </div>
+          </div>
+
+          <div class="process-card d-flex gap-4">
+            <div class="process-number">02</div>
+            <div>
+              <h3 class="h5 fw-bold">Planejamento e configuração</h3>
+              <p class="muted mb-0">Definição da estrutura de campanha, orçamento e indicadores relevantes.</p>
+            </div>
+          </div>
+
+          <div class="process-card d-flex gap-4">
+            <div class="process-number">03</div>
+            <div>
+              <h3 class="h5 fw-bold">Monitoramento e testes</h3>
+              <p class="muted mb-0">Acompanhamento do desempenho e avaliação de ajustes possíveis.</p>
+            </div>
+          </div>
+
+          <div class="process-card d-flex gap-4">
+            <div class="process-number">04</div>
+            <div>
+              <h3 class="h5 fw-bold">Análise e evolução</h3>
+              <p class="muted mb-0">Revisão dos indicadores e próximos passos alinhados aos resultados observados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="contact-panel">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <span class="section-label">Vamos conversar</span>
+            <h2 class="section-title">Seu próximo passo no digital começa com uma boa estratégia.</h2>
+            <p class="muted mb-0">
+              Entre em contato para conversar sobre seus objetivos,
+              entender as necessidades do seu negócio e avaliar possíveis
+              estratégias de tráfego pago.
+            </p>
+          </div>
+
+          <div class="col-lg-5">
+            <h3 class="h5 fw-bold mb-4">Informações profissionais</h3>
+
+            <div class="contact-item">
+              <i class="bi bi-person-circle"></i>
+              <div>
+                <strong>Sanderley Santos Borges</strong>
+                <div class="muted small">Gestor de tráfego pago</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <strong>Localização</strong>
+                <div class="muted">Avenida Caiçara</div>
+                <div class="muted">Imperatriz – Maranhão</div>
+                <div class="muted">CEP 65910-440</div>
+              </div>
+            </div>
+
+            <p class="small muted mt-4 mb-0">
+              Adicione seu e-mail profissional, telefone ou WhatsApp
+              somente quando estiver pronto para divulgá-los.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <span class="fw-bold text-white">Sanderley Santos Borges</span>
+    <span>Gestão de tráfego pago • Imperatriz, MA</span>
+    <span>© <span id="year"></span> Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
