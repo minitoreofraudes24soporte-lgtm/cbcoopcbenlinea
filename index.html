@@ -1,536 +1,1843 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Pereira | Marketing Digital, Google Ads e Investimentos</title>
+<meta name="description" content="Lucas Pereira de Oliveira Costa — Gestor de Marketing Digital especialista em Google Ads, inovação, aplicações, gerenciamento, dicas e aulas sobre investimentos. Instituição de ajuda a clientes de empresas, CB e cooperativas.">
+<meta name="keywords" content="Lucas Pereira, marketing digital, Google Ads, gestor de tráfego, inovação, investimentos, aulas de investimento, cooperativas, CB, consultoria empresarial">
+<meta name="author" content="Lucas Pereira de Oliveira Costa">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0f1f">
 
-  <title>Sanderley Santos Borges | Gestor de Tráfego Pago</title>
-  <meta name="description" content="Sanderley Santos Borges — gestão de tráfego pago, campanhas digitais, otimização de anúncios e estratégias de marketing para empresas.">
+<meta property="og:title" content="Lucas Pereira | Marketing Digital, Google Ads e Investimentos">
+<meta property="og:description" content="Gestão de marketing digital, Google Ads, inovação, investimentos e apoio a empresas, CB e cooperativas.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Lucas Pereira">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #0b1020;
-      --panel: #121a2d;
-      --purple: #9270ff;
-      --cyan: #52e2d0;
-      --text: #f5f7ff;
-      --muted: #a6b0c5;
-    }
+<style>
+/* ====================== VARIÁVEIS ====================== */
+:root {
+    --primary: #0a0f1f;
+    --primary-2: #131a33;
+    --primary-3: #1e2847;
+    --accent: #00d4ff;
+    --accent-2: #4ae3ff;
+    --accent-dark: #00a8cc;
+    --gold: #f5c542;
+    --text: #1f2937;
+    --text-mute: #6b7280;
+    --bg: #f7f9fc;
+    --bg-alt: #eef3f9;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --success: #10b981;
+    --shadow-sm: 0 1px 3px rgba(10,15,31,0.06);
+    --shadow-md: 0 8px 24px rgba(10,15,31,0.08);
+    --shadow-lg: 0 24px 48px rgba(10,15,31,0.14);
+    --shadow-xl: 0 32px 64px rgba(10,15,31,0.18);
+}
 
-    * { box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 
-    html { scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, sans-serif;
-    }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
 
-    a { text-decoration: none; }
+/* ====================== TOPBAR ====================== */
+.topbar {
+    background: var(--primary);
+    color: #c9d3e6;
+    font-size: 0.82rem;
+    padding: 10px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+.topbar strong { color: #fff; font-weight: 600; }
+.topbar a { color: var(--accent-2); text-decoration: none; font-weight: 600; }
+.topbar a:hover { text-decoration: underline; }
+.topbar .dot { opacity: 0.4; }
 
-    .navbar {
-      background: rgba(11,16,32,.94);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(15px);
-    }
+/* ====================== NAVBAR ====================== */
+.navbar {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border);
+}
+.nav-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-weight: 900;
+    font-size: 1.05rem;
+    letter-spacing: -1px;
+    box-shadow: 0 6px 14px rgba(10,15,31,0.25);
+}
+.brand-text { line-height: 1.15; }
+.brand-text .name {
+    font-weight: 800;
+    font-size: 1.12rem;
+    color: var(--primary);
+    letter-spacing: -0.4px;
+}
+.brand-text .tag {
+    font-size: 0.7rem;
+    color: var(--text-mute);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    font-weight: 600;
+}
 
-    .navbar-brand { color: white; font-weight: 800; }
+.nav-links {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    align-items: center;
+}
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    position: relative;
+}
+.nav-links a:hover { color: var(--accent-dark); }
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; left: 0;
+    width: 0; height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
 
-    .brand-icon {
-      display: inline-grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      margin-right: 10px;
-      border-radius: 13px;
-      color: #0b1020;
-      background: linear-gradient(135deg,var(--cyan),var(--purple));
-    }
+.nav-cta {
+    background: var(--accent);
+    color: var(--primary) !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.86rem;
+    transition: all 0.25s !important;
+}
+.nav-cta:hover {
+    background: var(--accent-2);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,212,255,0.4);
+}
+.nav-cta::after { display: none; }
 
-    .nav-link { color: #c4cbe0; }
-    .nav-link:hover { color: var(--cyan); }
+/* ====================== HERO ====================== */
+.hero {
+    background:
+        radial-gradient(circle at 15% 25%, rgba(0,212,255,0.16) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(0,212,255,0.10) 0%, transparent 45%),
+        linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+    color: #fff;
+    padding: 110px 24px 120px;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+.hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+@media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding: 80px 20px 90px; }
+}
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,212,255,0.16);
+    color: var(--accent-2);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    border: 1px solid rgba(0,212,255,0.35);
+}
+.hero-badge::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0,212,255,0.25);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+.hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3.3rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    margin-bottom: 22px;
+}
+.hero h1 .hl { color: var(--accent-2); }
+.hero p.lead {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    max-width: 580px;
+    margin-bottom: 40px;
+    line-height: 1.75;
+}
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+    box-shadow: 0 10px 24px rgba(0,212,255,0.35);
+}
+.btn-primary:hover {
+    background: var(--accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,212,255,0.5);
+}
+.btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.25);
+}
+.btn-ghost:hover {
+    border-color: #fff;
+    background: rgba(255,255,255,0.06);
+}
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 50px;
+    padding-top: 34px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    max-width: 580px;
+}
+.hero-stat .num {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--accent-2);
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.hero-stat .lbl {
+    font-size: 0.74rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 8px;
+    display: block;
+}
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 150px 0 100px;
-      background:
-        radial-gradient(ellipse at 80% 20%,rgba(146,112,255,.22),transparent 40%),
-        radial-gradient(ellipse at 10% 80%,rgba(82,226,208,.12),transparent 35%),
-        var(--bg);
-    }
+/* Hero Card */
+.hero-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 34px 32px;
+    backdrop-filter: blur(10px);
+}
+.hero-card h3 {
+    font-size: 0.76rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-card-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.hero-card-item:last-child { border-bottom: none; padding-bottom: 0; }
+.hero-card-item .ico {
+    width: 38px; height: 38px;
+    background: rgba(0,212,255,0.16);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+.hero-card-item .k {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+.hero-card-item .v {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.92rem;
+    word-break: break-word;
+}
 
-    .eyebrow {
-      display: inline-block;
-      padding: 9px 14px;
-      border: 1px solid rgba(82,226,208,.3);
-      border-radius: 30px;
-      color: var(--cyan);
-      background: rgba(82,226,208,.06);
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+/* ====================== STRIP ====================== */
+.strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 24px;
+}
+.strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.strip-item {
+    color: var(--text-mute);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.strip-item::before {
+    content: '◆';
+    color: var(--accent);
+    font-size: 0.7rem;
+}
 
-    h1, h2, h3 { letter-spacing: -1px; }
+/* ====================== SEÇÃO BASE ====================== */
+section.block { padding: 90px 24px; }
+section.alt { background: var(--white); }
+.container { max-width: 1200px; margin: 0 auto; }
 
-    .hero h1 {
-      margin: 25px 0;
-      font-size: clamp(2.7rem,6vw,5rem);
-      font-weight: 800;
-      line-height: 1.08;
-    }
+.section-head {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+.section-head .eyebrow {
+    display: inline-block;
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    font-size: 0.74rem;
+    margin-bottom: 14px;
+    padding: 6px 14px;
+    background: rgba(0,212,255,0.12);
+    border-radius: 50px;
+}
+.section-head h2 {
+    font-size: clamp(1.75rem, 3.4vw, 2.4rem);
+    color: var(--primary);
+    letter-spacing: -0.8px;
+    line-height: 1.18;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+.section-head p {
+    color: var(--text-mute);
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
 
-    .gradient-text {
-      color: var(--purple);
-      background: linear-gradient(90deg,#b5a0ff,var(--cyan));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+/* ====================== FEATURES ====================== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 26px;
+}
+.feat {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 30px;
+    transition: all 0.35s cubic-bezier(.2,.8,.2,1);
+    position: relative;
+    overflow: hidden;
+}
+.feat::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+.feat:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+.feat:hover::before { transform: scaleX(1); }
+.feat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    color: var(--accent-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 20px rgba(10,15,31,0.15);
+}
+.feat h3 {
+    font-size: 1.06rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.feat p {
+    color: var(--text-mute);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
 
-    .lead-copy {
-      max-width: 620px;
-      color: var(--muted);
-      line-height: 1.9;
-    }
+/* ====================== SOBRE 2 COLUNAS ====================== */
+.about-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+@media (max-width: 900px) { .about-2col { grid-template-columns: 1fr; gap: 40px; } }
+.about-2col h2 {
+    font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+    color: var(--primary);
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+.about-2col p {
+    color: var(--text-mute);
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 18px;
+}
+.about-list {
+    list-style: none;
+    margin-top: 26px;
+}
+.about-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border);
+    color: var(--text);
+    font-size: 0.95rem;
+}
+.about-list li:last-child { border-bottom: none; }
+.about-list .check {
+    width: 24px; height: 24px;
+    background: rgba(16,185,129,0.12);
+    color: var(--success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.about-visual {
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    border-radius: 20px;
+    padding: 44px 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+.about-visual::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 260px; height: 260px;
+    background: radial-gradient(circle, rgba(0,212,255,0.22), transparent 70%);
+    border-radius: 50%;
+}
+.about-visual h3 {
+    font-size: 1.15rem;
+    margin-bottom: 26px;
+    position: relative;
+    font-weight: 700;
+}
+.about-visual .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+.about-visual .stat-row:last-child { border-bottom: none; }
+.about-visual .stat-row .lbl {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.about-visual .stat-row .val {
+    color: var(--accent-2);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: right;
+}
 
-    .btn-main {
-      display: inline-block;
-      padding: 14px 22px;
-      border: 0;
-      border-radius: 10px;
-      color: #09121d;
-      background: linear-gradient(110deg,var(--cyan),#a5f3e7);
-      font-weight: 800;
-      transition: .2s;
-    }
+/* ====================== PRODUTOS ====================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+.prod {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 34px 28px;
+    transition: all 0.3s;
+    position: relative;
+}
+.prod:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: rgba(0,212,255,0.4);
+}
+.prod-num {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    display: block;
+}
+.prod h4 {
+    color: var(--primary);
+    font-size: 1.04rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.prod p {
+    color: var(--text-mute);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
 
-    .btn-main:hover {
-      color: #09121d;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(82,226,208,.17);
-    }
+/* ====================== SERVIÇOS ====================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+.service {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 30px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.service::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle, rgba(0,212,255,0.10), transparent 70%);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+.service:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+.service:hover::after {
+    width: 200px; height: 200px;
+}
+.service-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+.service h4 {
+    color: var(--primary);
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+.service p {
+    color: var(--text-mute);
+    font-size: 0.92rem;
+    line-height: 1.75;
+    position: relative;
+    z-index: 1;
+}
 
-    .btn-outline-custom {
-      display: inline-block;
-      padding: 13px 22px;
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 10px;
-      color: white;
-      font-weight: 600;
-    }
+/* ====================== DADOS CADASTRAIS ====================== */
+.cadastro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+@media (max-width: 860px) { .cadastro-grid { grid-template-columns: 1fr; } }
 
-    .btn-outline-custom:hover {
-      color: var(--cyan);
-      border-color: var(--cyan);
-    }
+.cad-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+}
+.cad-card:hover { box-shadow: var(--shadow-md); }
+.cad-card h3 {
+    font-size: 1.02rem;
+    color: var(--primary);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+.cad-card h3 .dot {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+.data-list { list-style: none; }
+.data-list li {
+    padding: 15px 0;
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.data-list li:last-child { border-bottom: none; }
+.data-list .label {
+    color: var(--text-mute);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.data-list .value {
+    color: var(--primary);
+    font-weight: 600;
+    text-align: right;
+    font-size: 0.93rem;
+    word-break: break-word;
+}
+.badge-active {
+    background: rgba(16,185,129,0.12);
+    color: var(--success);
+    padding: 3px 12px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
 
-    .hero-card {
-      padding: 35px;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 24px;
-      background: linear-gradient(145deg,#19243c,#101728);
-      box-shadow: 0 25px 80px rgba(0,0,0,.2);
-    }
+.compliance {
+    margin-top: 40px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border-left: 5px solid var(--success);
+    border-radius: 12px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    box-shadow: var(--shadow-sm);
+}
+.compliance .shield {
+    font-size: 2rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+.compliance strong {
+    display: block;
+    color: var(--primary);
+    margin-bottom: 6px;
+    font-size: 1.02rem;
+    font-weight: 700;
+}
+.compliance p {
+    color: #4b5563;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
 
-    .chart-icon {
-      display: grid;
-      place-items: center;
-      height: 220px;
-      border-radius: 20px;
-      color: var(--cyan);
-      background:
-        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
-        #0d1528;
-      background-size: 30px 30px;
-      font-size: 5rem;
-    }
+/* ====================== DEPOIMENTOS ====================== */
+.depo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+.depo {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 34px 30px;
+    transition: all 0.3s;
+    position: relative;
+}
+.depo:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+.depo .quote-mark {
+    font-size: 3rem;
+    color: var(--accent);
+    line-height: 0.6;
+    font-weight: 900;
+    margin-bottom: 18px;
+    opacity: 0.4;
+}
+.depo p {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    font-style: italic;
+}
+.depo .author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+.depo .avatar {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    color: var(--accent-2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+.depo .author-info .name {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.92rem;
+    display: block;
+}
+.depo .author-info .role {
+    color: var(--text-mute);
+    font-size: 0.8rem;
+}
 
-    .section { padding: 90px 0; }
+/* ====================== FAQ ====================== */
+.faq-wrap { max-width: 880px; margin: 0 auto; }
+.faq-item {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+.faq-item[open] {
+    background: var(--white);
+    border-color: rgba(0,212,255,0.4);
+    box-shadow: var(--shadow-md);
+}
+.faq-item summary {
+    padding: 22px 28px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.98rem;
+    transition: color 0.2s;
+}
+.faq-item summary:hover { color: var(--accent-dark); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+    line-height: 1;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item .faq-content {
+    padding: 0 28px 24px;
+    color: var(--text-mute);
+    font-size: 0.93rem;
+    line-height: 1.8;
+}
 
-    .section-label {
-      color: var(--cyan);
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+/* ====================== CONTATO ====================== */
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 34px;
+}
+@media (max-width: 880px) { .contato-grid { grid-template-columns: 1fr; } }
 
-    .section-title {
-      margin: 13px 0 18px;
-      font-size: clamp(2rem,4vw,3.2rem);
-      font-weight: 800;
-    }
+.contato-info {
+    background: linear-gradient(160deg, var(--primary), var(--primary-2));
+    color: #fff;
+    padding: 44px 38px;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+}
+.contato-info::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(0,212,255,0.20), transparent 70%);
+    border-radius: 50%;
+}
+.contato-info h3 {
+    font-size: 1.22rem;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: 700;
+}
+.c-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+    align-items: flex-start;
+    position: relative;
+}
+.c-item:last-child { margin-bottom: 0; }
+.c-item .ico {
+    width: 44px; height: 44px;
+    background: rgba(0,212,255,0.16);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.c-item .k {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    opacity: 0.6;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.c-item .v, .c-item a {
+    color: #fff;
+    font-size: 0.94rem;
+    text-decoration: none;
+    word-break: break-word;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.c-item a:hover { color: var(--accent-2); }
 
-    .muted { color: var(--muted); line-height: 1.85; }
+.contato-form {
+    background: var(--white);
+    padding: 44px 40px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+.contato-form h3 {
+    font-size: 1.22rem;
+    color: var(--primary);
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+.fg { margin-bottom: 20px; }
+.fg label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
+}
+.fg input, .fg textarea, .fg select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.94rem;
+    transition: all 0.2s;
+    background: var(--bg);
+    color: var(--text);
+}
+.fg input:focus, .fg textarea:focus, .fg select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0,212,255,0.12);
+    background: #fff;
+}
+.fg textarea { min-height: 130px; resize: vertical; }
+.fg-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+@media (max-width: 520px) { .fg-row { grid-template-columns: 1fr; } }
+.submit {
+    width: 100%;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.98rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-family: inherit;
+    letter-spacing: 0.3px;
+    box-shadow: 0 10px 24px rgba(0,212,255,0.35);
+}
+.submit:hover {
+    background: var(--accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,212,255,0.5);
+}
 
-    .service-card {
-      height: 100%;
-      padding: 30px;
-      border: 1px solid rgba(255,255,255,.09);
-      border-radius: 18px;
-      background: var(--panel);
-      transition: transform .2s,border-color .2s;
-    }
+/* ====================== CTA BAND ====================== */
+.cta-band {
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    color: #fff;
+    padding: 80px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(0,212,255,0.16), transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(0,212,255,0.10), transparent 45%);
+}
+.cta-band-inner { position: relative; max-width: 780px; margin: 0 auto; }
+.cta-band h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    margin-bottom: 16px;
+}
+.cta-band p {
+    color: #cbd5e1;
+    margin-bottom: 32px;
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+.cta-band .btn { padding: 16px 34px; font-size: 1rem; }
 
-    .service-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(82,226,208,.45);
-    }
+/* ====================== FOOTER ====================== */
+footer {
+    background: #060a14;
+    color: #94a3b8;
+    padding: 70px 24px 0;
+    font-size: 0.9rem;
+}
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+    gap: 44px;
+    padding-bottom: 55px;
+}
+@media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
 
-    .service-icon {
-      display: grid;
-      place-items: center;
-      width: 55px;
-      height: 55px;
-      margin-bottom: 22px;
-      border-radius: 16px;
-      color: var(--cyan);
-      background: rgba(82,226,208,.1);
-      font-size: 1.6rem;
-    }
+.f-brand .logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.f-brand .logo span { color: var(--accent); }
+.f-brand p {
+    line-height: 1.8;
+    font-size: 0.87rem;
+    margin-bottom: 16px;
+}
+.f-brand .cnpj-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    margin-top: 8px;
+}
+.f-brand .cnpj-box strong { color: var(--accent); }
 
-    .service-card h3 { font-size: 1.15rem; font-weight: 700; }
+.f-col h4 {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+}
+.f-col ul { list-style: none; }
+.f-col li { margin-bottom: 12px; line-height: 1.6; }
+.f-col a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.87rem;
+}
+.f-col a:hover { color: var(--accent); }
+.f-col p { font-size: 0.87rem; line-height: 1.8; }
+.f-col p strong { color: #cbd5e1; }
 
-    .process-number {
-      color: var(--purple);
-      font-size: 2.4rem;
-      font-weight: 800;
-    }
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 26px 24px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #64748b;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.footer-bottom .links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer-bottom .links a:hover { color: var(--accent); }
 
-    .process-card {
-      padding: 25px 0;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
+/* ====================== WHATSAPP ====================== */
+.wa {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 58px;
+    height: 58px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 28px rgba(37,211,102,0.5);
+    text-decoration: none;
+    z-index: 999;
+    transition: transform 0.3s;
+}
+.wa:hover { transform: scale(1.1) rotate(6deg); }
 
-    .contact-panel {
-      padding: 45px;
-      border: 1px solid rgba(146,112,255,.28);
-      border-radius: 24px;
-      background:
-        radial-gradient(circle at 100% 0,rgba(146,112,255,.16),transparent 40%),
-        var(--panel);
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 15px;
-      align-items: flex-start;
-      margin: 22px 0;
-    }
-
-    .contact-item i {
-      color: var(--cyan);
-      font-size: 1.4rem;
-    }
-
-    footer {
-      padding: 28px 0;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    @media(max-width:767px) {
-      .hero { padding: 120px 0 70px; }
-      .section { padding: 65px 0; }
-      .hero-card,.contact-panel { padding: 25px; }
-    }
-  </style>
+/* ====================== RESPONSIVO ====================== */
+@media (max-width: 720px) {
+    .nav-links { display: none; }
+    .hero { padding: 70px 20px 80px; }
+    section.block { padding: 65px 20px; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .contato-form { padding: 32px 24px; }
+    .contato-info { padding: 34px 26px; }
+    .cad-card { padding: 28px 22px; }
+    .compliance { padding: 22px; flex-direction: column; gap: 14px; }
+    .footer-bottom { justify-content: center; text-align: center; }
+    .about-visual { padding: 34px 26px; }
+}
+</style>
 </head>
-
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container py-2">
-    <a class="navbar-brand d-flex align-items-center" href="#inicio">
-      <span class="brand-icon"><i class="bi bi-graph-up-arrow"></i></span>
-      <span>Sanderley Borges</span>
-    </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#menu" aria-controls="menu" aria-expanded="false"
-      aria-label="Abrir menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!-- ====================== TOPBAR ====================== -->
+<div class="topbar">
+    <span>📍 <strong>Atendimento 100% online — Brasil</strong></span>
+    <span class="dot">•</span>
+    <span>Marketing Digital · Google Ads · Investimentos</span>
+    <span class="dot">•</span>
+    <a href="#contato">Falar comigo →</a>
+</div>
 
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link" href="#metodo">Metodologia</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-      </ul>
+<!-- ====================== NAVBAR ====================== -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="brand">
+            <div class="brand-mark">LP</div>
+            <div class="brand-text">
+                <div class="name">Lucas Pereira</div>
+                <div class="tag">Marketing Digital · Google Ads</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#areas">Atuação</a></li>
+            <li><a href="#cadastro">Perfil Profissional</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato" class="nav-cta">Contato</a></li>
+        </ul>
     </div>
-  </div>
 </nav>
 
-<main>
-  <section class="hero" id="inicio">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <span class="eyebrow">
-            <i class="bi bi-bullseye me-2"></i>Marketing de performance
-          </span>
-
-          <h1>
-            Estratégia digital para
-            <span class="gradient-text">atrair clientes.</span>
-          </h1>
-
-          <p class="lead-copy">
-            Sou Sanderley Santos Borges, gestor de tráfego pago.
-            Meu foco é ajudar empresas a estruturar campanhas digitais,
-            alcançar públicos relevantes e tomar decisões com base
-            em dados, testes e otimização contínua.
-          </p>
-
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="#servicos" class="btn-main">
-              Conheça os serviços <i class="bi bi-arrow-right ms-2"></i>
-            </a>
-            <a href="#contato" class="btn-outline-custom">Entre em contato</a>
-          </div>
-
-          <p class="small muted mt-4 mb-0">
-            Estratégia • Análise • Otimização
-          </p>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="hero-card">
-            <div class="chart-icon">
-              <i class="bi bi-bar-chart-line"></i>
+<!-- ====================== HERO ====================== -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <span class="hero-badge">Gestor de Marketing Digital & Especialista em Google Ads</span>
+            <h1>Estratégia, <span class="hl">inovação</span> e resultados para empresas, CB e cooperativas.</h1>
+            <p class="lead">
+                Sou <strong>Lucas Pereira de Oliveira Costa</strong>, gestor de marketing digital especialista em Google Ads,
+                inovação, aplicações, gerenciamento de campanhas, dicas e aulas sobre investimento — com atuação como instituição de ajuda a clientes de empresas, corretoras de bens (CB) e cooperativas.
+            </p>
+            <div class="hero-actions">
+                <a href="#contato" class="btn btn-primary">Falar comigo →</a>
+                <a href="#servicos" class="btn btn-ghost">Ver Serviços</a>
             </div>
-            <h2 class="h4 fw-bold mt-4">Tráfego com estratégia</h2>
-            <p class="muted mb-0">
-              Planejamento de campanhas, acompanhamento de indicadores
-              e melhorias contínuas orientadas pelos objetivos do negócio.
-            </p>
-          </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="num">100%</div>
+                    <span class="lbl">Foco em Performance</span>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">Ads</div>
+                    <span class="lbl">Google Ads Expert</span>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">BR</div>
+                    <span class="lbl">Atendimento Nacional</span>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="hero-card">
+            <h3>◆ Perfil Profissional</h3>
+            <div class="hero-card-item">
+                <div class="ico">👤</div>
+                <div>
+                    <div class="k">Nome Completo</div>
+                    <div class="v">Lucas Pereira de Oliveira Costa</div>
+                </div>
+            </div>
+            <div class="hero-card-item">
+                <div class="ico">🎯</div>
+                <div>
+                    <div class="k">Especialidades</div>
+                    <div class="v">Marketing Digital · Google Ads · Investimentos</div>
+                </div>
+            </div>
+            <div class="hero-card-item">
+                <div class="ico">📊</div>
+                <div>
+                    <div class="k">Atuação</div>
+                    <div class="v">Gestão, Consultoria, Aulas e Apoio a Clientes</div>
+                </div>
+            </div>
+            <div class="hero-card-item">
+                <div class="ico">🤝</div>
+                <div>
+                    <div class="k">Público</div>
+                    <div class="v">Empresas · CB · Cooperativas</div>
+                </div>
+            </div>
+            <div class="hero-card-item">
+                <div class="ico">✓</div>
+                <div>
+                    <div class="k">Status</div>
+                    <div class="v" style="color:#4ae3ff;">Disponível para novos projetos</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section class="section" id="sobre">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-5">
-          <span class="section-label">Sobre mim</span>
-          <h2 class="section-title">Marketing que começa com planejamento.</h2>
-        </div>
-        <div class="col-lg-7">
-          <p class="muted">
-            A gestão de tráfego pago vai além de criar anúncios.
-            Ela envolve entender o público, definir objetivos, estruturar
-            campanhas, acompanhar resultados e identificar oportunidades
-            de melhoria ao longo do tempo.
-          </p>
-          <p class="muted mb-0">
-            Meu trabalho é voltado à construção de uma presença digital
-            mais estratégica, com comunicação clara, acompanhamento
-            organizado e decisões orientadas por métricas relevantes.
-          </p>
-        </div>
-      </div>
+<!-- ====================== STRIP ====================== -->
+<div class="strip">
+    <div class="strip-inner">
+        <div class="strip-item">Gestor de Marketing Digital</div>
+        <div class="strip-item">Especialista em Google Ads</div>
+        <div class="strip-item">Consultor em Investimentos</div>
+        <div class="strip-item">Inovação & Aplicações</div>
+        <div class="strip-item">Aulas e Dicas</div>
     </div>
-  </section>
+</div>
 
-  <section class="section pt-0" id="servicos">
+<!-- ====================== SOBRE ====================== -->
+<section class="block" id="sobre">
     <div class="container">
-      <div class="mb-5">
-        <span class="section-label">O que faço</span>
-        <h2 class="section-title">Serviços de tráfego pago</h2>
-        <p class="muted">Soluções que podem ser ajustadas aos objetivos e à realidade de cada negócio.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <article class="service-card">
-            <div class="service-icon"><i class="bi bi-google"></i></div>
-            <h3>Google Ads</h3>
-            <p class="muted mb-0">
-              Estruturação e otimização de campanhas de pesquisa e outras
-              modalidades compatíveis com os objetivos do negócio.
-            </p>
-          </article>
+        <div class="section-head">
+            <span class="eyebrow">Sobre Mim</span>
+            <h2>Estratégia, inovação e resultado com foco no cliente</h2>
+            <p>Sou gestor de marketing digital especializado em Google Ads, inovação, aplicações e gerenciamento de campanhas — com experiência em orientar empresas, corretoras de bens (CB) e cooperativas sobre investimentos, com dicas, aulas e acompanhamento próximo.</p>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <article class="service-card">
-            <div class="service-icon"><i class="bi bi-megaphone"></i></div>
-            <h3>Anúncios em redes sociais</h3>
-            <p class="muted mb-0">
-              Planejamento de campanhas para alcançar públicos relevantes
-              em plataformas sociais, conforme a estratégia definida.
-            </p>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="service-card">
-            <div class="service-icon"><i class="bi bi-graph-up"></i></div>
-            <h3>Análise de desempenho</h3>
-            <p class="muted mb-0">
-              Acompanhamento de indicadores, análise de custos e
-              identificação de oportunidades para melhorar campanhas.
-            </p>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="service-card">
-            <div class="service-icon"><i class="bi bi-bullseye"></i></div>
-            <h3>Estratégia de público</h3>
-            <p class="muted mb-0">
-              Definição de objetivos, públicos e mensagens alinhadas
-              ao posicionamento e à oferta da empresa.
-            </p>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="service-card">
-            <div class="service-icon"><i class="bi bi-speedometer2"></i></div>
-            <h3>Otimização contínua</h3>
-            <p class="muted mb-0">
-              Revisão de campanhas, testes e ajustes baseados nos dados
-              disponíveis e nas metas estabelecidas.
-            </p>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="service-card">
-            <div class="service-icon"><i class="bi bi-layout-text-window"></i></div>
-            <h3>Jornada do cliente</h3>
-            <p class="muted mb-0">
-              Avaliação dos anúncios e das páginas de destino para
-              buscar uma experiência mais clara e coerente para o público.
-            </p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="metodo" style="background:#0e1527">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-5">
-          <span class="section-label">Como trabalho</span>
-          <h2 class="section-title">Um processo claro, do plano à otimização.</h2>
-          <p class="muted">
-            Cada projeto precisa de objetivos definidos, acompanhamento
-            consistente e transparência sobre o que os dados mostram.
-          </p>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="process-card d-flex gap-4">
-            <div class="process-number">01</div>
+        <div class="about-2col">
             <div>
-              <h3 class="h5 fw-bold">Diagnóstico e objetivos</h3>
-              <p class="muted mb-0">Entendimento do negócio, do público e das metas prioritárias.</p>
-            </div>
-          </div>
+                <h2>Ajuda real a clientes, com transparência e resultado.</h2>
+                <p>
+                    Meu trabalho une três frentes: <strong>marketing digital e Google Ads</strong> para gerar leads e vendas; <strong>consultoria em investimentos</strong> com dicas, aulas e orientação sobre as melhores maneiras de investir; e <strong>apoio institucional a clientes de empresas, CB e cooperativas</strong>, oferecendo atendimento próximo e soluções práticas.
+                </p>
+                <p>
+                    Minha atuação é pautada pela transparência, comunicação clara e uso de estratégias baseadas em dados — nunca em achismos.
+                </p>
 
-          <div class="process-card d-flex gap-4">
-            <div class="process-number">02</div>
-            <div>
-              <h3 class="h5 fw-bold">Planejamento e configuração</h3>
-              <p class="muted mb-0">Definição da estrutura de campanha, orçamento e indicadores relevantes.</p>
+                <ul class="about-list">
+                    <li><span class="check">✓</span> Gestor de marketing digital e especialista em Google Ads</li>
+                    <li><span class="check">✓</span> Consultor em investimentos com aulas e dicas práticas</li>
+                    <li><span class="check">✓</span> Aplicações, inovação e gerenciamento de campanhas</li>
+                    <li><span class="check">✓</span> Apoio a clientes de empresas, CB e cooperativas</li>
+                    <li><span class="check">✓</span> Atendimento personalizado e comunicação transparente</li>
+                </ul>
             </div>
-          </div>
 
-          <div class="process-card d-flex gap-4">
-            <div class="process-number">03</div>
-            <div>
-              <h3 class="h5 fw-bold">Monitoramento e testes</h3>
-              <p class="muted mb-0">Acompanhamento do desempenho e avaliação de ajustes possíveis.</p>
+            <div class="about-visual">
+                <h3>◆ Perfil Profissional</h3>
+                <div class="stat-row">
+                    <span class="lbl">Nome</span>
+                    <span class="val">Lucas Pereira de Oliveira Costa</span>
+                </div>
+                <div class="stat-row">
+                    <span class="lbl">Áreas</span>
+                    <span class="val">Marketing · Ads · Investimentos</span>
+                </div>
+                <div class="stat-row">
+                    <span class="lbl">Atuação</span>
+                    <span class="val">Gestão · Consultoria · Aulas</span>
+                </div>
+                <div class="stat-row">
+                    <span class="lbl">Público</span>
+                    <span class="val">Empresas · CB · Cooperativas</span>
+                </div>
+                <div class="stat-row">
+                    <span class="lbl">Cobertura</span>
+                    <span class="val">Brasil (remoto)</span>
+                </div>
+                <div class="stat-row">
+                    <span class="lbl">Status</span>
+                    <span class="val" style="color:#4ae3ff;">● Disponível</span>
+                </div>
             </div>
-          </div>
-
-          <div class="process-card d-flex gap-4">
-            <div class="process-number">04</div>
-            <div>
-              <h3 class="h5 fw-bold">Análise e evolução</h3>
-              <p class="muted mb-0">Revisão dos indicadores e próximos passos alinhados aos resultados observados.</p>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <section class="section" id="contato">
+<!-- ====================== DIFERENCIAIS ====================== -->
+<section class="block alt">
     <div class="container">
-      <div class="contact-panel">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-7">
-            <span class="section-label">Vamos conversar</span>
-            <h2 class="section-title">Seu próximo passo no digital começa com uma boa estratégia.</h2>
-            <p class="muted mb-0">
-              Entre em contato para conversar sobre seus objetivos,
-              entender as necessidades do seu negócio e avaliar possíveis
-              estratégias de tráfego pago.
-            </p>
-          </div>
-
-          <div class="col-lg-5">
-            <h3 class="h5 fw-bold mb-4">Informações profissionais</h3>
-
-            <div class="contact-item">
-              <i class="bi bi-person-circle"></i>
-              <div>
-                <strong>Sanderley Santos Borges</strong>
-                <div class="muted small">Gestor de tráfego pago</div>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="bi bi-geo-alt"></i>
-              <div>
-                <strong>Localização</strong>
-                <div class="muted">Avenida Caiçara</div>
-                <div class="muted">Imperatriz – Maranhão</div>
-                <div class="muted">CEP 65910-440</div>
-              </div>
-            </div>
-
-            <p class="small muted mt-4 mb-0">
-              Adicione seu e-mail profissional, telefone ou WhatsApp
-              somente quando estiver pronto para divulgá-los.
-            </p>
-          </div>
+        <div class="section-head">
+            <span class="eyebrow">Meus Diferenciais</span>
+            <h2>Por que trabalhar comigo</h2>
+            <p>Estratégia personalizada, foco em performance, comunicação clara e apoio próximo a empresas, CB e cooperativas.</p>
         </div>
-      </div>
-    </div>
-  </section>
-</main>
 
+        <div class="features">
+            <div class="feat">
+                <div class="feat-icon">🎯</div>
+                <h3>Especialista em Google Ads</h3>
+                <p>Domínio das plataformas de anúncios do Google: Pesquisa, Display, YouTube, Shopping e Performance Max.</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">📈</div>
+                <h3>Foco em Performance</h3>
+                <p>Campanhas otimizadas para gerar o máximo de resultado com o menor custo por aquisição possível.</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">💡</div>
+                <h3>Inovação e Aplicações</h3>
+                <p>Uso de inovação e tecnologia aplicada para melhorar processos, resultados e tomada de decisão.</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">💰</div>
+                <h3>Consultoria em Investimentos</h3>
+                <p>Dicas, aulas e orientação sobre as melhores maneiras de investir, com linguagem clara e responsável.</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">🤝</div>
+                <h3>Apoio a Empresas, CB e Cooperativas</h3>
+                <p>Atuação como instituição de ajuda a clientes, com atendimento próximo e suporte estratégico.</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">🛡️</div>
+                <h3>Compromisso com Transparência</h3>
+                <p>Todos os dados apresentados são públicos e verificáveis, em conformidade com as políticas de publicidade digital.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== SERVIÇOS ====================== -->
+<section class="block" id="servicos">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Meus Serviços</span>
+            <h2>Soluções completas em marketing, Google Ads e investimentos</h2>
+            <p>Do planejamento à execução, ofereço serviços completos para empresas, corretoras de bens e cooperativas.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service">
+                <div class="service-icon">🔍</div>
+                <h4>Gestão de Google Ads</h4>
+                <p>Criação, gerenciamento e otimização de campanhas de pesquisa, display, YouTube, Shopping e PMax.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">📊</div>
+                <h4>Marketing Digital</h4>
+                <p>Estratégia completa de marketing digital, incluindo tráfego pago, análise de métricas e otimização de resultados.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">💡</div>
+                <h4>Inovação e Aplicações</h4>
+                <p>Aplicação de inovação e tecnologia no negócio para melhorar processos e gerar mais resultado.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">📚</div>
+                <h4>Aulas e Dicas de Investimento</h4>
+                <p>Aulas e orientações práticas sobre investimentos, com foco nas melhores maneiras de investir.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">🏢</div>
+                <h4>Apoio a Empresas, CB e Cooperativas</h4>
+                <p>Instituição de ajuda a clientes, com consultoria e suporte estratégico personalizado.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">📈</div>
+                <h4>Consultoria e Gerenciamento</h4>
+                <p>Consultoria estratégica para escalar resultados e gerenciamento contínuo de campanhas e investimentos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== ÁREAS DE ATUAÇÃO ====================== -->
+<section class="block alt" id="areas">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Áreas de Atuação</span>
+            <h2>Atendo diferentes perfis de clientes</h2>
+            <p>Trabalho com empresas, corretoras de bens (CB) e cooperativas que precisam de estratégia, apoio institucional e orientação em investimentos.</p>
+        </div>
+
+        <div class="products-grid">
+            <div class="prod">
+                <span class="prod-num">01 / PÚBLICO</span>
+                <h4>🏢 Empresas</h4>
+                <p>Atendimento estratégico para empresas de diferentes portes que buscam crescer com marketing digital e investimentos.</p>
+            </div>
+            <div class="prod">
+                <span class="prod-num">02 / PÚBLICO</span>
+                <h4>💼 Corretoras de Bens (CB)</h4>
+                <p>Apoio institucional a clientes de corretoras de bens, com orientação, consultoria e suporte estratégico.</p>
+            </div>
+            <div class="prod">
+                <span class="prod-num">03 / PÚBLICO</span>
+                <h4>🤝 Cooperativas</h4>
+                <p>Apoio a cooperativas com consultoria, orientação e atendimento próximo a clientes e cooperados.</p>
+            </div>
+            <div class="prod">
+                <span class="prod-num">04 / PÚBLICO</span>
+                <h4>👤 Profissionais e Empreendedores</h4>
+                <p>Consultoria e orientação para profissionais e empreendedores que desejam investir com consciência.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== PERFIL PROFISSIONAL (DADOS) ====================== -->
+<section class="block" id="cadastro">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Transparência Profissional</span>
+            <h2>Perfil Profissional</h2>
+            <p>Informações claras sobre minha atuação como gestor de marketing digital, especialista em Google Ads e consultor em investimentos, em conformidade com as políticas de transparência exigidas por plataformas de publicidade digital.</p>
+        </div>
+
+        <div class="cadastro-grid">
+            <div class="cad-card">
+                <h3><span class="dot"></span> Identificação Profissional</h3>
+                <ul class="data-list">
+                    <li>
+                        <span class="label">Nome Completo</span>
+                        <span class="value">Lucas Pereira de Oliveira Costa</span>
+                    </li>
+                    <li>
+                        <span class="label">CPF (parcial)</span>
+                        <span class="value">056.***.***-93 <br><small style="font-weight:400;color:#6b7280;">Exibido parcialmente por segurança (LGPD)</small></span>
+                    </li>
+                    <li>
+                        <span class="label">Áreas de Atuação</span>
+                        <span class="value">Marketing Digital · Google Ads · Investimentos</span>
+                    </li>
+                    <li>
+                        <span class="label">Especialidades</span>
+                        <span class="value">Inovação · Aplicações · Gerenciamento · Aulas e Dicas</span>
+                    </li>
+                    <li>
+                        <span class="label">Público Atendido</span>
+                        <span class="value">Empresas · CB · Cooperativas</span>
+                    </li>
+                    <li>
+                        <span class="label">Status</span>
+                        <span class="value"><span class="badge-active">Disponível</span></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cad-card">
+                <h3><span class="dot"></span> Atuação e Cobertura</h3>
+                <ul class="data-list">
+                    <li>
+                        <span class="label">Serviços Prestados</span>
+                        <span class="value">Gestão de Marketing, Google Ads, Consultoria em Investimentos e Aulas</span>
+                    </li>
+                    <li>
+                        <span class="label">Modalidade</span>
+                        <span class="value">Remoto — Todo o Brasil</span>
+                    </li>
+                    <li>
+                        <span class="label">E-mail</span>
+                        <span class="value"><!-- ALTERAR -->contato@lucaspereira.com.br</span>
+                    </li>
+                    <li>
+                        <span class="label">Telefone</span>
+                        <span class="value"><!-- ALTERAR -->(00) 00000-0000</span>
+                    </li>
+                    <li>
+                        <span class="label">Horário de Atendimento</span>
+                        <span class="value">Seg. a Sex., 09h às 18h</span>
+                    </li>
+                    <li>
+                        <span class="label">Cobertura</span>
+                        <span class="value">Nacional (online)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="compliance">
+            <div class="shield">🛡️</div>
+            <div>
+                <strong>Compromisso com a Transparência e a Privacidade</strong>
+                <p>As informações apresentadas nesta página são verídicas e refletem minha atuação profissional. O CPF é exibido de forma parcial em respeito à LGPD (Lei Geral de Proteção de Dados), protegendo meus dados pessoais e mantendo a conformidade legal. Presto serviços com transparência, comunicação clara e conformidade com as políticas de publicidade digital das plataformas com as quais trabalho.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== DEPOIMENTOS ====================== -->
+<section class="block alt">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">O Que Dizem Meus Clientes</span>
+            <h2>Resultados que geram confiança</h2>
+            <p>Clientes que confiam no meu trabalho para gerar leads, aumentar vendas, organizar investimentos e escalar resultados.</p>
+        </div>
+
+        <div class="depo-grid">
+            <div class="depo">
+                <div class="quote-mark">"</div>
+                <p>O Lucas estruturou nossas campanhas do zero e em poucos meses já sentimos diferença real no volume de leads. Profissional atento e estratégico.</p>
+                <div class="author">
+                    <div class="avatar">RA</div>
+                    <div class="author-info">
+                        <span class="name">Cliente Empresarial</span>
+                        <span class="role">Marketing Digital · Empresa</span>
+                    </div>
+                </div>
+            </div>
+            <div class="depo">
+                <div class="quote-mark">"</div>
+                <p>As aulas e dicas sobre investimento trouxeram clareza para decisões que eu vinha postergando. Explicação simples, sem enrolação.</p>
+                <div class="author">
+                    <div class="avatar">FC</div>
+                    <div class="author-info">
+                        <span class="name">Cliente Cooperado</span>
+                        <span class="role">Cooperativa · RJ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="depo">
+                <div class="quote-mark">"</div>
+                <p>Profissional que entende de verdade de tráfego pago e de investimentos. Foco em dados, inovação e resultados consistentes. Recomendo sem hesitar.</p>
+                <div class="author">
+                    <div class="avatar">LM</div>
+                    <div class="author-info">
+                        <span class="name">Cliente Recorrente</span>
+                        <span class="role">Corretora de Bens (CB)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== FAQ ====================== -->
+<section class="block" id="faq">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Dúvidas Frequentes</span>
+            <h2>Perguntas Frequentes</h2>
+            <p>Respostas rápidas sobre minha atuação, serviços, investimentos e formas de contato.</p>
+        </div>
+
+        <div class="faq-wrap">
+            <details class="faq-item">
+                <summary>O que faz um gestor de marketing digital especialista em Google Ads?</summary>
+                <div class="faq-content">
+                    O gestor é o profissional responsável por planejar, criar, gerenciar e otimizar campanhas de anúncios pagos, com foco em gerar leads e vendas com o melhor custo-benefício possível — sempre aliado a estratégias de marketing digital.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Quais serviços você oferece?</summary>
+                <div class="faq-content">
+                    Ofereço gestão completa de marketing digital e Google Ads (Pesquisa, Display, YouTube, Shopping e Performance Max), consultoria em investimentos, aulas e dicas sobre melhores maneiras de investir, além de apoio institucional a clientes de empresas, CB e cooperativas.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Você atende clientes de todo o Brasil?</summary>
+                <div class="faq-content">
+                    Sim. Trabalho 100% remoto e atendo clientes de todo o Brasil, com comunicação por e-mail, WhatsApp, videochamadas e envio de relatórios periódicos.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Como funciona o apoio a clientes de empresas, CB e cooperativas?</summary>
+                <div class="faq-content">
+                    Atuo como instituição de ajuda a clientes, oferecendo orientação, consultoria e suporte estratégico. O atendimento é personalizado e estruturado conforme as necessidades de cada empresa, corretora de bens ou cooperativa.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>As aulas e dicas sobre investimento substituem consultoria financeira?</summary>
+                <div class="faq-content">
+                    Não. As aulas e dicas têm caráter educativo e informativo, com foco em orientar sobre melhores maneiras de investir. Não substituem consultoria financeira individualizada de profissional habilitado (como um consultor CVM), e cada decisão de investimento é de responsabilidade do cliente.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Você emite relatórios de resultados?</summary>
+                <div class="faq-content">
+                    Sim. Envio relatórios periódicos com métricas de desempenho, investimento, resultados e próximos passos. A transparência e a clareza nos dados são prioridade no meu trabalho.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Como funciona a contratação?</summary>
+                <div class="faq-content">
+                    O processo começa com uma conversa inicial para entender o negócio, os objetivos e o orçamento disponível. Em seguida, monto uma proposta personalizada com escopo, estratégia e formato de acompanhamento.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Como faço para falar com você?</summary>
+                <div class="faq-content">
+                    Você pode entrar em contato pelo e-mail, telefone ou formulário disponíveis na seção "Contato" desta página. Responderei o mais breve possível dentro do meu horário de atendimento.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== CONTATO ====================== -->
+<section class="block alt" id="contato">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Fale Comigo</span>
+            <h2>Vamos conversar sobre o seu projeto</h2>
+            <p>Envie sua mensagem, dúvida ou solicitação de proposta. Responderei pelos canais oficiais abaixo.</p>
+        </div>
+
+        <div class="contato-grid">
+            <div class="contato-info">
+                <h3>Canais Oficiais</h3>
+
+                <div class="c-item">
+                    <div class="ico">📧</div>
+                    <div>
+                        <span class="k">E-mail</span>
+                        <!-- ALTERAR -->
+                        <a href="mailto:contato@lucaspereira.com.br">contato@lucaspereira.com.br</a>
+                    </div>
+                </div>
+
+                <div class="c-item">
+                    <div class="ico">📞</div>
+                    <div>
+                        <span class="k">Telefone / WhatsApp</span>
+                        <!-- ALTERAR -->
+                        <a href="tel:+5500000000000">(00) 00000-0000</a>
+                    </div>
+                </div>
+
+                <div class="c-item">
+                    <div class="ico">💻</div>
+                    <div>
+                        <span class="k">Atendimento</span>
+                        <p class="v">Remoto — Todo o Brasil</p>
+                    </div>
+                </div>
+
+                <div class="c-item">
+                    <div class="ico">🎯</div>
+                    <div>
+                        <span class="k">Especialidades</span>
+                        <p class="v">Marketing · Google Ads · Investimentos</p>
+                    </div>
+                </div>
+
+                <div class="c-item">
+                    <div class="ico">🕒</div>
+                    <div>
+                        <span class="k">Horário de Atendimento</span>
+                        <p class="v">Segunda a Sexta — 09h às 18h</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contato-form" action="#" method="post">
+                <h3>Envie uma mensagem</h3>
+
+                <div class="fg-row">
+                    <div class="fg">
+                        <label for="nome">Nome / Empresa *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome ou empresa">
+                    </div>
+                    <div class="fg">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+                </div>
+
+                <div class="fg-row">
+                    <div class="fg">
+                        <label for="telefone">Telefone / WhatsApp</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="fg">
+                        <label for="assunto">Assunto *</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione…</option>
+                            <option>Gestão de Google Ads</option>
+                            <option>Marketing Digital</option>
+                            <option>Consultoria em Investimentos</option>
+                            <option>Aulas e Dicas de Investimento</option>
+                            <option>Apoio a Empresas, CB ou Cooperativas</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fg">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Descreva seu projeto ou necessidade…"></textarea>
+                </div>
+
+                <button type="submit" class="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== CTA BAND ====================== -->
+<section class="cta-band">
+    <div class="cta-band-inner">
+        <h2>Pronto para escalar resultados com marketing, Google Ads e investimentos?</h2>
+        <p>Entre em contato agora mesmo e receba uma proposta personalizada em gestão de marketing digital, Google Ads, consultoria em investimentos e apoio a empresas, CB e cooperativas.</p>
+        <a href="#contato" class="btn btn-primary">Falar com Lucas Pereira →</a>
+    </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
 <footer>
-  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-    <span class="fw-bold text-white">Sanderley Santos Borges</span>
-    <span>Gestão de tráfego pago • Imperatriz, MA</span>
-    <span>© <span id="year"></span> Todos os direitos reservados.</span>
-  </div>
+    <div class="footer-grid">
+        <div class="f-brand">
+            <div class="logo">
+                <span style="display:inline-block;width:36px;height:36px;background:linear-gradient(135deg,#0a0f1f,#131a33);border-radius:10px;color:#00d4ff;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;">LP</span>
+                Lucas <span>Pereira</span>
+            </div>
+            <p>Gestor de Marketing Digital, especialista em Google Ads e consultor em investimentos. Apoio a empresas, CB e cooperativas, com dicas, aulas e orientação profissional.</p>
+            <div class="cnpj-box">
+                CPF: <strong>056.***.***-93</strong> <small>(parcial — LGPD)</small>
+            </div>
+        </div>
+
+        <div class="f-col">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#areas">Atuação</a></li>
+                <li><a href="#cadastro">Perfil Profissional</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="f-col">
+            <h4>Institucional</h4>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+                <li><a href="#cadastro">Transparência</a></li>
+            </ul>
+        </div>
+
+        <div class="f-col">
+            <h4>Contato</h4>
+            <p>
+                <strong>E-mail:</strong><br>
+                <!-- ALTERAR -->contato@lucaspereira.com.br<br><br>
+                <strong>Telefone:</strong><br>
+                <!-- ALTERAR -->(00) 00000-0000<br><br>
+                <strong>Atendimento:</strong><br>
+                Remoto — Todo o Brasil
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div>© <span id="year"></span> Lucas Pereira de Oliveira Costa — Todos os direitos reservados.</div>
+        <div class="links">
+            <a href="#">Privacidade</a> • 
+            <a href="#">Termos</a> • 
+            <a href="#cadastro">Especialista em Google Ads e Investimentos</a>
+        </div>
+    </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ====================== WHATSAPP FLOAT ====================== -->
+<a href="https://wa.me/5500000000000" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <!-- ALTERAR número do WhatsApp acima -->
+    💬
+</a>
+
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
